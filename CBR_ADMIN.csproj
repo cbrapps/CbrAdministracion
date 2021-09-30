@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7C03D01-1D8E-4F17-B48E-96CFA232235F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CBR_ADMIN</RootNamespace>
+    <AssemblyName>CBR_ADMIN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.1.24722.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DG.AdvancedDataGridView.1.1.24722.8\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Cake.Core, Version=0.37.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Cake.Core.0.37.0\lib\net46\Cake.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Handles, Version=7.0.0.12335, Culture=neutral, PublicKeyToken=46a833be9e90de8c, processorArchitecture=MSIL">
+      <HintPath>packages\EcoCore.7.0.0.12335\lib\net40\Eco.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.Interfaces, Version=7.0.0.12335, Culture=neutral, PublicKeyToken=46a833be9e90de8c, processorArchitecture=MSIL">
+      <HintPath>packages\EcoCore.7.0.0.12335\lib\net40\Eco.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.LinqExtender, Version=7.0.0.12335, Culture=neutral, PublicKeyToken=46a833be9e90de8c, processorArchitecture=MSIL">
+      <HintPath>packages\EcoCore.7.0.0.12335\lib\net40\Eco.LinqExtender.dll</HintPath>
+    </Reference>
+    <Reference Include="Eco.WPF, Version=7.0.0.12335, Culture=neutral, PublicKeyToken=46a833be9e90de8c, processorArchitecture=MSIL">
+      <HintPath>packages\EcoWpf.7.0.0.12335\lib\net40\Eco.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="GongShell">
+      <HintPath>..\..\..\Downloads\windows\GongShell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.Process, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.Process.4.3.0\lib\net461\System.Diagnostics.Process.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WECPOFLogic, Version=7.0.0.12335, Culture=neutral, PublicKeyToken=46a833be9e90de8c, processorArchitecture=MSIL">
+      <HintPath>packages\EcoWpf.7.0.0.12335\lib\net40\WECPOFLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFViewModelExternalControls, Version=7.0.0.12335, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EcoWpf.7.0.0.12335\lib\net40\WPFViewModelExternalControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\Actualizacion_NC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Actualizacion_NC.Designer.cs">
+      <DependentUpon>Actualizacion_NC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Avance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Avance.Designer.cs">
+      <DependentUpon>Avance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\CargaNCmasivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\CargaNCmasivo.Designer.cs">
+      <DependentUpon>CargaNCmasivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\CargaPdfNC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\CargaPdfNC.Designer.cs">
+      <DependentUpon>CargaPdfNC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Ciere_Accion_Mejora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Ciere_Accion_Mejora.Designer.cs">
+      <DependentUpon>Ciere_Accion_Mejora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Cierre_No_confor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Cierre_No_confor.Designer.cs">
+      <DependentUpon>Cierre_No_confor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Consulta_No_Conf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Consulta_No_Conf.Designer.cs">
+      <DependentUpon>Consulta_No_Conf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Consulta_No_Conf_general.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Consulta_No_Conf_general.Designer.cs">
+      <DependentUpon>Consulta_No_Conf_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Consulta_OportunidadesMejora_General.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Consulta_OportunidadesMejora_General.Designer.cs">
+      <DependentUpon>Consulta_OportunidadesMejora_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Consulta_Oportunidades_Mejora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Consulta_Oportunidades_Mejora.Designer.cs">
+      <DependentUpon>Consulta_Oportunidades_Mejora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Detalle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Detalle.Designer.cs">
+      <DependentUpon>Detalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Genera_AM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Genera_AM.Designer.cs">
+      <DependentUpon>Genera_AM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Genera_No_Confor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Genera_No_Confor.Designer.cs">
+      <DependentUpon>Genera_No_Confor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Progresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Progresos.Designer.cs">
+      <DependentUpon>Progresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Seguimiento_AM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Seguimiento_AM.Designer.cs">
+      <DependentUpon>Seguimiento_AM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Seguimiento_No_confor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administracion\Seguimiento_No_confor.Designer.cs">
+      <DependentUpon>Seguimiento_No_confor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\ValidadorProyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\ValidadorProyecto.Designer.cs">
+      <DependentUpon>ValidadorProyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Altoflujo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Altoflujo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Avance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Avance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Carga.cs" />
+    <Compile Include="Carpetas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carpetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Departamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Departamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Fecha_Cierre_AC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Fecha_Cierre_AC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Fecha_Compromiso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Fecha_Compromiso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Fecha_Compromiso_AC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Fecha_Compromiso_AC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Fecha_Reporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Fecha_Reporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Folio_Rehabilitacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Folio_Rehabilitacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Login_Dep.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Login_Dep.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_migrapermisos.cs">
+      <DependentUpon>CBR_migrapermisos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_migrapermisos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_migrapermisos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_NC_abiertas_año_actual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_NC_abiertas_año_actual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_NC_Abiertas_Mes.cs">
+      <DependentUpon>CBR_NC_Abiertas_Mes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_NC_Abiertas_Mes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_NC_Abiertas_Mes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_NC_Acumulado_Año.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_NC_Acumulado_Año.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Nc_cerradas_año_actual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Nc_cerradas_año_actual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_NC_Cerradas_Mes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_NC_Cerradas_Mes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Nc_Diferencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Nc_Diferencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Accion_Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_No_Accion_Usuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Conf.cs">
+      <DependentUpon>CBR_No_Conf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Conf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_No_Conf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_conformi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_No_conformi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Confor_Usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_No_Confor_Usuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Oportunidad.cs">
+      <DependentUpon>CBR_No_Oportunidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_No_Oportunidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_No_Oportunidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Procesos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Procesos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Prospectos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Prospectos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Reestablece.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Reestablece.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Responsable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Responsable.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_ResponsableAC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_ResponsableAC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cbr_Tikets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cbr_Tikets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBR_Verificacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBR_Verificacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cb_term_inox.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cb_term_inox.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Compacta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Compacta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosGenerales.cs" />
+    <Compile Include="Folio_general.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Folio_general.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Folio_proyecto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Folio_proyecto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Folio_Proyectos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Folio_Proyectos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="INOX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INOX.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LiderEq.cs">
+      <DependentUpon>LiderEq.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LiderEq.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiderEq.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LiderLobra.cs">
+      <DependentUpon>LiderLobra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LiderLobra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiderLobra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LiderLP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiderLP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Match_carpetas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Match_carpetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectos_Avance.cs">
+      <DependentUpon>proyectos_Avance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="proyectos_Avance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectos_Avance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_acceso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registro_acceso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_usuarios_monitor.cs">
+      <DependentUpon>Registro_usuarios_monitor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_usuarios_monitor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Registro_usuarios_monitor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Documents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Service_Documents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Actualiza_lideres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sistema\Actualiza_lideres.Designer.cs">
+      <DependentUpon>Actualiza_lideres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Actualiza_porcentaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Actualiza_porcentaje.Designer.cs">
+      <DependentUpon>Actualiza_porcentaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Bienvenida_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Bienvenida_Principal.Designer.cs">
+      <DependentUpon>Bienvenida_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\cNetworkDrive_0017.cs" />
+    <Compile Include="Sistema\Consulta_Proyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Consulta_Proyectos.Designer.cs">
+      <DependentUpon>Consulta_Proyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Consulta_Proyectos_General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Consulta_Proyectos_General.Designer.cs">
+      <DependentUpon>Consulta_Proyectos_General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Crea_Propuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Crea_Propuesta.Designer.cs">
+      <DependentUpon>Crea_Propuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Crea_proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Crea_proyecto.Designer.cs">
+      <DependentUpon>Crea_proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Conexion VPN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Conexion VPN.designer.cs">
+      <DependentUpon>Conexion VPN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Administracion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Administracion.Designer.cs">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Aplicativo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Aplicativo.Designer.cs">
+      <DependentUpon>Aplicativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\CierreTickets.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\CierreTickets.Designer.cs">
+      <DependentUpon>CierreTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Optimizacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Optimizacion.Designer.cs">
+      <DependentUpon>Optimizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Otros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Otros.Designer.cs">
+      <DependentUpon>Otros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Servicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Servicio.Designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT\Tickets\Soporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT\Tickets\Soporte.Designer.cs">
+      <DependentUpon>Soporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Alta_usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sistema\Alta_usuarios.Designer.cs">
+      <DependentUpon>Alta_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Baja_usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sistema\Baja_usuarios.Designer.cs">
+      <DependentUpon>Baja_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Config_usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sistema\Config_usuarios.Designer.cs">
+      <DependentUpon>Config_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Crea_Rehabilitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Crea_Rehabilitacion.Designer.cs">
+      <DependentUpon>Crea_Rehabilitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Folio_Proyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Folio_Proyectos.Designer.cs">
+      <DependentUpon>Folio_Proyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema\MsgBoxUtil.cs" />
+    <Compile Include="Sistema\Notificacion1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Notificacion1.Designer.cs">
+      <DependentUpon>Notificacion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Password.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sistema\Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Proceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Proceso.Designer.cs">
+      <DependentUpon>Proceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Procesocarp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Procesocarp.Designer.cs">
+      <DependentUpon>Procesocarp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\ProcesoPorcentaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\ProcesoPorcentaje.Designer.cs">
+      <DependentUpon>ProcesoPorcentaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\pruebas.Designer.cs">
+      <DependentUpon>pruebas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Reestablecimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Reestablecimiento.Designer.cs">
+      <DependentUpon>Reestablecimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\TransDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Validacion_carpetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Validacion_carpetas.Designer.cs">
+      <DependentUpon>Validacion_carpetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table_Pdf.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Table_Pdf.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="term_af.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>term_af.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tikets_Fecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tikets_Fecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Transmisor.cs" />
+    <Compile Include="Verificador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Verificador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="windowsNavegador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="windowsNavegador.Designer.cs">
+      <DependentUpon>windowsNavegador.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administracion\Actualizacion_NC.resx">
+      <DependentUpon>Actualizacion_NC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Avance.resx">
+      <DependentUpon>Avance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\CargaNCmasivo.resx">
+      <DependentUpon>CargaNCmasivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\CargaPdfNC.resx">
+      <DependentUpon>CargaPdfNC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Ciere_Accion_Mejora.resx">
+      <DependentUpon>Ciere_Accion_Mejora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Cierre_No_confor.resx">
+      <DependentUpon>Cierre_No_confor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Consulta_No_Conf.resx">
+      <DependentUpon>Consulta_No_Conf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Consulta_No_Conf_general.resx">
+      <DependentUpon>Consulta_No_Conf_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Consulta_OportunidadesMejora_General.resx">
+      <DependentUpon>Consulta_OportunidadesMejora_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Consulta_Oportunidades_Mejora.resx">
+      <DependentUpon>Consulta_Oportunidades_Mejora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Detalle.resx">
+      <DependentUpon>Detalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Genera_AM.resx">
+      <DependentUpon>Genera_AM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Genera_No_Confor.resx">
+      <DependentUpon>Genera_No_Confor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Progresos.resx">
+      <DependentUpon>Progresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Seguimiento_AM.resx">
+      <DependentUpon>Seguimiento_AM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Seguimiento_No_confor.resx">
+      <DependentUpon>Seguimiento_No_confor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\ValidadorProyecto.resx">
+      <DependentUpon>ValidadorProyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Actualiza_lideres.resx">
+      <DependentUpon>Actualiza_lideres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Actualiza_porcentaje.resx">
+      <DependentUpon>Actualiza_porcentaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Bienvenida_Principal.resx">
+      <DependentUpon>Bienvenida_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Consulta_Proyectos.resx">
+      <DependentUpon>Consulta_Proyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Consulta_Proyectos_General.resx">
+      <DependentUpon>Consulta_Proyectos_General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Crea_Propuesta.resx">
+      <DependentUpon>Crea_Propuesta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Crea_proyecto.resx">
+      <DependentUpon>Crea_proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Conexion VPN.resx">
+      <DependentUpon>Conexion VPN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Administracion.resx">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Aplicativo.resx">
+      <DependentUpon>Aplicativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\CierreTickets.resx">
+      <DependentUpon>CierreTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Optimizacion.resx">
+      <DependentUpon>Optimizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Otros.resx">
+      <DependentUpon>Otros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT\Tickets\Soporte.resx">
+      <DependentUpon>Soporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Alta_usuarios.resx">
+      <DependentUpon>Alta_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Baja_usuarios.resx">
+      <DependentUpon>Baja_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Config_usuarios.resx">
+      <DependentUpon>Config_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Crea_Rehabilitacion.resx">
+      <DependentUpon>Crea_Rehabilitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Folio_Proyectos.resx">
+      <DependentUpon>Folio_Proyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General.resx">
+      <DependentUpon>General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sistema\Notificacion1.resx">
+      <DependentUpon>Notificacion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Proceso.resx">
+      <DependentUpon>Proceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Procesocarp.resx">
+      <DependentUpon>Procesocarp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\ProcesoPorcentaje.resx">
+      <DependentUpon>ProcesoPorcentaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\pruebas.resx">
+      <DependentUpon>pruebas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Reestablecimiento.resx">
+      <DependentUpon>Reestablecimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\TransDialog.resx">
+      <DependentUpon>TransDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Validacion_carpetas.resx">
+      <DependentUpon>Validacion_carpetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windowsNavegador.resx">
+      <DependentUpon>windowsNavegador.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Altoflujo.xsc">
+      <DependentUpon>Altoflujo.xsd</DependentUpon>
+    </None>
+    <None Include="Altoflujo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Altoflujo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Altoflujo.xss">
+      <DependentUpon>Altoflujo.xsd</DependentUpon>
+    </None>
+    <None Include="Avance.xsc">
+      <DependentUpon>Avance.xsd</DependentUpon>
+    </None>
+    <None Include="Avance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Avance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Avance.xss">
+      <DependentUpon>Avance.xsd</DependentUpon>
+    </None>
+    <None Include="Carpetas.xsc">
+      <DependentUpon>Carpetas.xsd</DependentUpon>
+    </None>
+    <None Include="Carpetas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carpetas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carpetas.xss">
+      <DependentUpon>Carpetas.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Departamento.xsc">
+      <DependentUpon>CBR_Departamento.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Departamento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Departamento.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Departamento.xss">
+      <DependentUpon>CBR_Departamento.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Cierre_AC.xsc">
+      <DependentUpon>CBR_Fecha_Cierre_AC.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Cierre_AC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Fecha_Cierre_AC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Fecha_Cierre_AC.xss">
+      <DependentUpon>CBR_Fecha_Cierre_AC.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Compromiso.xsc">
+      <DependentUpon>CBR_Fecha_Compromiso.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Compromiso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Fecha_Compromiso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Fecha_Compromiso.xss">
+      <DependentUpon>CBR_Fecha_Compromiso.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Compromiso_AC.xsc">
+      <DependentUpon>CBR_Fecha_Compromiso_AC.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Compromiso_AC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Fecha_Compromiso_AC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Fecha_Compromiso_AC.xss">
+      <DependentUpon>CBR_Fecha_Compromiso_AC.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Reporte.xsc">
+      <DependentUpon>CBR_Fecha_Reporte.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Fecha_Reporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Fecha_Reporte.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Fecha_Reporte.xss">
+      <DependentUpon>CBR_Fecha_Reporte.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Folio_Rehabilitacion.xsc">
+      <DependentUpon>CBR_Folio_Rehabilitacion.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Folio_Rehabilitacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Folio_Rehabilitacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Folio_Rehabilitacion.xss">
+      <DependentUpon>CBR_Folio_Rehabilitacion.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Login_Dep.xsc">
+      <DependentUpon>CBR_Login_Dep.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Login_Dep.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Login_Dep.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Login_Dep.xss">
+      <DependentUpon>CBR_Login_Dep.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_migrapermisos.xsc">
+      <DependentUpon>CBR_migrapermisos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_migrapermisos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_migrapermisos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_migrapermisos.xss">
+      <DependentUpon>CBR_migrapermisos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_abiertas_año_actual.xsc">
+      <DependentUpon>CBR_NC_abiertas_año_actual.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_abiertas_año_actual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_NC_abiertas_año_actual.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_NC_abiertas_año_actual.xss">
+      <DependentUpon>CBR_NC_abiertas_año_actual.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Abiertas_Mes.xsc">
+      <DependentUpon>CBR_NC_Abiertas_Mes.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Abiertas_Mes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_NC_Abiertas_Mes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_NC_Abiertas_Mes.xss">
+      <DependentUpon>CBR_NC_Abiertas_Mes.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Acumulado_Año.xsc">
+      <DependentUpon>CBR_NC_Acumulado_Año.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Acumulado_Año.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_NC_Acumulado_Año.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_NC_Acumulado_Año.xss">
+      <DependentUpon>CBR_NC_Acumulado_Año.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Nc_cerradas_año_actual.xsc">
+      <DependentUpon>CBR_Nc_cerradas_año_actual.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Nc_cerradas_año_actual.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Nc_cerradas_año_actual.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Nc_cerradas_año_actual.xss">
+      <DependentUpon>CBR_Nc_cerradas_año_actual.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Cerradas_Mes.xsc">
+      <DependentUpon>CBR_NC_Cerradas_Mes.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_NC_Cerradas_Mes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_NC_Cerradas_Mes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_NC_Cerradas_Mes.xss">
+      <DependentUpon>CBR_NC_Cerradas_Mes.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Nc_Diferencia.xsc">
+      <DependentUpon>CBR_Nc_Diferencia.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Nc_Diferencia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Nc_Diferencia.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Nc_Diferencia.xss">
+      <DependentUpon>CBR_Nc_Diferencia.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Accion_Usuarios.xsc">
+      <DependentUpon>CBR_No_Accion_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Accion_Usuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_No_Accion_Usuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_No_Accion_Usuarios.xss">
+      <DependentUpon>CBR_No_Accion_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Conf.xsc">
+      <DependentUpon>CBR_No_Conf.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Conf.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_No_Conf.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_No_Conf.xss">
+      <DependentUpon>CBR_No_Conf.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_conformi.xsc">
+      <DependentUpon>CBR_No_conformi.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_conformi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_No_conformi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_No_conformi.xss">
+      <DependentUpon>CBR_No_conformi.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Confor_Usuario.xsc">
+      <DependentUpon>CBR_No_Confor_Usuario.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Confor_Usuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_No_Confor_Usuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_No_Confor_Usuario.xss">
+      <DependentUpon>CBR_No_Confor_Usuario.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Oportunidad.xsc">
+      <DependentUpon>CBR_No_Oportunidad.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_No_Oportunidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_No_Oportunidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_No_Oportunidad.xss">
+      <DependentUpon>CBR_No_Oportunidad.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Procesos.xsc">
+      <DependentUpon>CBR_Procesos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Procesos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Procesos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Procesos.xss">
+      <DependentUpon>CBR_Procesos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Prospectos.xsc">
+      <DependentUpon>CBR_Prospectos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Prospectos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Prospectos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Prospectos.xss">
+      <DependentUpon>CBR_Prospectos.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Reestablece.xsc">
+      <DependentUpon>CBR_Reestablece.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Reestablece.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Reestablece.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Reestablece.xss">
+      <DependentUpon>CBR_Reestablece.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Responsable.xsc">
+      <DependentUpon>CBR_Responsable.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Responsable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Responsable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Responsable.xss">
+      <DependentUpon>CBR_Responsable.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_ResponsableAC.xsc">
+      <DependentUpon>CBR_ResponsableAC.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_ResponsableAC.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_ResponsableAC.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_ResponsableAC.xss">
+      <DependentUpon>CBR_ResponsableAC.xsd</DependentUpon>
+    </None>
+    <None Include="Cbr_Tikets.xsc">
+      <DependentUpon>Cbr_Tikets.xsd</DependentUpon>
+    </None>
+    <None Include="Cbr_Tikets.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cbr_Tikets.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cbr_Tikets.xss">
+      <DependentUpon>Cbr_Tikets.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Verificacion.xsc">
+      <DependentUpon>CBR_Verificacion.xsd</DependentUpon>
+    </None>
+    <None Include="CBR_Verificacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBR_Verificacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBR_Verificacion.xss">
+      <DependentUpon>CBR_Verificacion.xsd</DependentUpon>
+    </None>
+    <None Include="cb_term_inox.xsc">
+      <DependentUpon>cb_term_inox.xsd</DependentUpon>
+    </None>
+    <None Include="cb_term_inox.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cb_term_inox.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cb_term_inox.xss">
+      <DependentUpon>cb_term_inox.xsd</DependentUpon>
+    </None>
+    <None Include="Compacta.xsc">
+      <DependentUpon>Compacta.xsd</DependentUpon>
+    </None>
+    <None Include="Compacta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Compacta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Compacta.xss">
+      <DependentUpon>Compacta.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_general.xsc">
+      <DependentUpon>Folio_general.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_general.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Folio_general.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Folio_general.xss">
+      <DependentUpon>Folio_general.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_proyecto.xsc">
+      <DependentUpon>Folio_proyecto.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_proyecto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Folio_proyecto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Folio_proyecto.xss">
+      <DependentUpon>Folio_proyecto.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_Proyectos.xsc">
+      <DependentUpon>Folio_Proyectos.xsd</DependentUpon>
+    </None>
+    <None Include="Folio_Proyectos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Folio_Proyectos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Folio_Proyectos.xss">
+      <DependentUpon>Folio_Proyectos.xsd</DependentUpon>
+    </None>
+    <None Include="INOX.xsc">
+      <DependentUpon>INOX.xsd</DependentUpon>
+    </None>
+    <None Include="INOX.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>INOX.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="INOX.xss">
+      <DependentUpon>INOX.xsd</DependentUpon>
+    </None>
+    <None Include="LiderEq.xsc">
+      <DependentUpon>LiderEq.xsd</DependentUpon>
+    </None>
+    <None Include="LiderEq.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiderEq.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LiderEq.xss">
+      <DependentUpon>LiderEq.xsd</DependentUpon>
+    </None>
+    <None Include="LiderLobra.xsc">
+      <DependentUpon>LiderLobra.xsd</DependentUpon>
+    </None>
+    <None Include="LiderLobra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiderLobra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LiderLobra.xss">
+      <DependentUpon>LiderLobra.xsd</DependentUpon>
+    </None>
+    <None Include="LiderLP.xsc">
+      <DependentUpon>LiderLP.xsd</DependentUpon>
+    </None>
+    <None Include="LiderLP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LiderLP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LiderLP.xss">
+      <DependentUpon>LiderLP.xsd</DependentUpon>
+    </None>
+    <None Include="Match_carpetas.xsc">
+      <DependentUpon>Match_carpetas.xsd</DependentUpon>
+    </None>
+    <None Include="Match_carpetas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Match_carpetas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Match_carpetas.xss">
+      <DependentUpon>Match_carpetas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="proyectos_Avance.xsc">
+      <DependentUpon>proyectos_Avance.xsd</DependentUpon>
+    </None>
+    <None Include="proyectos_Avance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectos_Avance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectos_Avance.xss">
+      <DependentUpon>proyectos_Avance.xsd</DependentUpon>
+    </None>
+    <None Include="Registro_acceso.xsc">
+      <DependentUpon>Registro_acceso.xsd</DependentUpon>
+    </None>
+    <None Include="Registro_acceso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Registro_acceso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Registro_acceso.xss">
+      <DependentUpon>Registro_acceso.xsd</DependentUpon>
+    </None>
+    <None Include="Registro_usuarios_monitor.xsc">
+      <DependentUpon>Registro_usuarios_monitor.xsd</DependentUpon>
+    </None>
+    <None Include="Registro_usuarios_monitor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Registro_usuarios_monitor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Registro_usuarios_monitor.xss">
+      <DependentUpon>Registro_usuarios_monitor.xsd</DependentUpon>
+    </None>
+    <None Include="Service_Documents.xsc">
+      <DependentUpon>Service_Documents.xsd</DependentUpon>
+    </None>
+    <None Include="Service_Documents.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Service_Documents.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service_Documents.xss">
+      <DependentUpon>Service_Documents.xsd</DependentUpon>
+    </None>
+    <None Include="Table_Pdf.xsc">
+      <DependentUpon>Table_Pdf.xsd</DependentUpon>
+    </None>
+    <None Include="Table_Pdf.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Table_Pdf.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Table_Pdf.xss">
+      <DependentUpon>Table_Pdf.xsd</DependentUpon>
+    </None>
+    <None Include="term_af.xsc">
+      <DependentUpon>term_af.xsd</DependentUpon>
+    </None>
+    <None Include="term_af.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>term_af.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="term_af.xss">
+      <DependentUpon>term_af.xsd</DependentUpon>
+    </None>
+    <None Include="Tikets_Fecha.xsc">
+      <DependentUpon>Tikets_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="Tikets_Fecha.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tikets_Fecha.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Tikets_Fecha.xss">
+      <DependentUpon>Tikets_Fecha.xsd</DependentUpon>
+    </None>
+    <None Include="Verificador.xsc">
+      <DependentUpon>Verificador.xsd</DependentUpon>
+    </None>
+    <None Include="Verificador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Verificador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Verificador.xss">
+      <DependentUpon>Verificador.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-1634110_640.png" />
+    <Content Include="Resources\logo_cbr.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\logo_cbr.png" />
+    <None Include="Resources\logo_cbr1.png" />
+    <None Include="Resources\logo_cbr1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Controlador\Controlador.csproj">
+      <Project>{839fa23e-1d20-4251-a943-4b3fcd2dd29a}</Project>
+      <Name>Controlador</Name>
+    </ProjectReference>
+    <ProjectReference Include="Modelo\Modelo.csproj">
+      <Project>{b880c2d5-1d8a-4a2f-9079-3c68b0e4647b}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
