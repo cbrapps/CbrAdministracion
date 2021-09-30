@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CBR_Fecha_Compromiso" targetNamespace="http://tempuri.org/CBR_Fecha_Compromiso.xsd" xmlns:mstns="http://tempuri.org/CBR_Fecha_Compromiso.xsd" xmlns="http://tempuri.org/CBR_Fecha_Compromiso.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CBR_IngenieriaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CBR_IngenieriaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CBR_ADMIN.Properties.Settings.GlobalReference.Default.CBR_IngenieriaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NC_Fecha_CompromisoTableAdapter" GeneratorDataComponentClassName="NC_Fecha_CompromisoTableAdapter" Name="NC_Fecha_Compromiso" UserDataComponentName="NC_Fecha_CompromisoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CBR_IngenieriaConnectionString (Settings)" DbObjectName="CBR_Ingenieria.dbo.NC_Fecha_Compromiso" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT FechaCompromiso FROM dbo.NC_Fecha_Compromiso</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FechaCompromiso" DataSetColumn="FechaCompromiso" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CBR_Fecha_Compromiso" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CBR_Fecha_Compromiso" msprop:Generator_UserDSName="CBR_Fecha_Compromiso">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NC_Fecha_Compromiso" msprop:Generator_TableClassName="NC_Fecha_CompromisoDataTable" msprop:Generator_TableVarName="tableNC_Fecha_Compromiso" msprop:Generator_TablePropName="NC_Fecha_Compromiso" msprop:Generator_RowDeletingName="NC_Fecha_CompromisoRowDeleting" msprop:Generator_RowChangingName="NC_Fecha_CompromisoRowChanging" msprop:Generator_RowEvHandlerName="NC_Fecha_CompromisoRowChangeEventHandler" msprop:Generator_RowDeletedName="NC_Fecha_CompromisoRowDeleted" msprop:Generator_UserTableName="NC_Fecha_Compromiso" msprop:Generator_RowChangedName="NC_Fecha_CompromisoRowChanged" msprop:Generator_RowEvArgName="NC_Fecha_CompromisoRowChangeEvent" msprop:Generator_RowClassName="NC_Fecha_CompromisoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaCompromiso" msprop:Generator_ColumnVarNameInTable="columnFechaCompromiso" msprop:Generator_ColumnPropNameInRow="FechaCompromiso" msprop:Generator_ColumnPropNameInTable="FechaCompromisoColumn" msprop:Generator_UserColumnName="FechaCompromiso" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CBR_NC_Abiertas_Mes" targetNamespace="http://tempuri.org/CBR_NC_Abiertas_Mes.xsd" xmlns:mstns="http://tempuri.org/CBR_NC_Abiertas_Mes.xsd" xmlns="http://tempuri.org/CBR_NC_Abiertas_Mes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CBR_IngenieriaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CBR_IngenieriaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CBR_ADMIN.Properties.Settings.GlobalReference.Default.CBR_IngenieriaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NC_abiertas_Departamento_MesTableAdapter" GeneratorDataComponentClassName="NC_abiertas_Departamento_MesTableAdapter" Name="NC_abiertas_Departamento_Mes" UserDataComponentName="NC_abiertas_Departamento_MesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CBR_IngenieriaConnectionString (Settings)" DbObjectName="CBR_Ingenieria.dbo.NC_abiertas_Departamento_Mes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT total_abiertas, Año, Mes, Departamento, ID FROM dbo.NC_abiertas_Departamento_Mes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="total_abiertas" DataSetColumn="total_abiertas" />
+              <Mapping SourceColumn="Año" DataSetColumn="Año" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="Departamento" DataSetColumn="Departamento" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="CBR_IngenieriaConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SET                LANGUAGE Español
+                             SELECT        total_abiertas, Año, Mes, Departamento, ID
+                              FROM            dbo.NC_abiertas_Departamento_Mes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CBR_NC_Abiertas_Mes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CBR_NC_Abiertas_Mes" msprop:Generator_UserDSName="CBR_NC_Abiertas_Mes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NC_abiertas_Departamento_Mes" msprop:Generator_TableClassName="NC_abiertas_Departamento_MesDataTable" msprop:Generator_TableVarName="tableNC_abiertas_Departamento_Mes" msprop:Generator_RowChangedName="NC_abiertas_Departamento_MesRowChanged" msprop:Generator_TablePropName="NC_abiertas_Departamento_Mes" msprop:Generator_RowDeletingName="NC_abiertas_Departamento_MesRowDeleting" msprop:Generator_RowChangingName="NC_abiertas_Departamento_MesRowChanging" msprop:Generator_RowEvHandlerName="NC_abiertas_Departamento_MesRowChangeEventHandler" msprop:Generator_RowDeletedName="NC_abiertas_Departamento_MesRowDeleted" msprop:Generator_RowClassName="NC_abiertas_Departamento_MesRow" msprop:Generator_UserTableName="NC_abiertas_Departamento_Mes" msprop:Generator_RowEvArgName="NC_abiertas_Departamento_MesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="total_abiertas" msprop:Generator_ColumnVarNameInTable="columntotal_abiertas" msprop:Generator_ColumnPropNameInRow="total_abiertas" msprop:Generator_ColumnPropNameInTable="total_abiertasColumn" msprop:Generator_UserColumnName="total_abiertas" type="xs:int" minOccurs="0" />
+              <xs:element name="Año" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnPropNameInTable="AñoColumn" msprop:Generator_UserColumnName="Año" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Departamento" msprop:Generator_ColumnVarNameInTable="columnDepartamento" msprop:Generator_ColumnPropNameInRow="Departamento" msprop:Generator_ColumnPropNameInTable="DepartamentoColumn" msprop:Generator_UserColumnName="Departamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
